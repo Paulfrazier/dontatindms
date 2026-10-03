@@ -18,4 +18,8 @@ with a site spec injected into `#site-config`. 40 scenarios across choices
 - Legit @ cases scoped to what the docs support: group-DM threads where the person hasn't started/replied/been mentioned, assigning ownership in a group DM, and a non-pinging reference to someone outside the DM.
 - Two choices (no @ vs @). A third "use their name" option was dropped as too fuzzy to grade.
 
+- Design review: PASS 8.8/10 on the first round. Applied fixes at site level, leaving the shared template untouched: links styled with `--purple-electric` inline, coral accents swapped to `--purple` for AA contrast, fixed a misquoted Slack setting name, softened two unverified claims, and rebalanced the answers from 33/7 to 30/10 so always choosing "no @" scores lower.
+- Deployed to Vercel project `dontatindms`. DNS: `A dontatindms → 76.76.21.21` must be added in Namecheap by hand, because the API rejected this machine's IP.
+- Linked from the fairpoint.website hub (13 lessons).
+
 **Changed files:** `spec.json`, `index.html`, `CONTRIBUTING.md`, `BUILD_LOG.md`
