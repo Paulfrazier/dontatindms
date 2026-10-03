@@ -1,0 +1,374 @@
+{
+  "slug": "dont-at-in-dms",
+  "subdomain": "dontatindms",
+  "repo": "dontatindms",
+  "title": "Don't @ in DMs. — they already get the notification",
+  "metaDescription": "A 40-scenario quiz on @mentioning people in Slack DMs. In a 1:1 DM, every message and every thread reply already notifies them. Drop the @.",
+  "h1": "Don't @ in DMs.",
+  "thesis": "Starting a DM with <code>@Sam</code> feels like making sure Sam sees it. Sam was always going to see it. In a direct message, the message <em>is</em> the ping, and that includes replies in a thread.",
+  "explainerHeading": "The 30-second explainer (straight from Slack's docs)",
+  "explainer": [
+    {
+      "h3": "1:1 DMs notify everything",
+      "accent": "--purple-electric",
+      "body": "By default, Slack notifies you when <a href=\"https://slack.com/help/articles/360025446073-Guide-to-Slack-notifications\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">someone sends you a direct message</a>. Threads too: <em>\"By default, you'll be notified of new replies to all threads in one-to-one DMs.\"</em> (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>) Adding an @ doesn't make that notification any louder."
+    },
+    {
+      "h3": "The one gap: group-DM threads",
+      "accent": "--purple",
+      "body": "<em>\"In channels or DMs with multiple people, you'll be notified of new replies if you started the thread, replied to it, or were mentioned.\"</em> (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>) So if someone in a group DM hasn't touched the thread, the @ is the only thing that reaches them."
+    }
+  ],
+  "trap": "<strong>The trap:</strong> The @ feels like insurance. In a 1:1 DM it insures against nothing, because they were getting that notification anyway. What it actually adds is tone: <code>@Sam</code> at the top of a private message reads like tapping on the glass. It also won't get past paused notifications. For a real emergency, Slack gives DM senders a <a href=\"https://slack.com/help/articles/214908388-Pause-notifications-with-Do-Not-Disturb\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">once-a-day \"notify anyway\" override</a>, and that's a separate button, not an @.",
+  "quizHeading": "Quiz: does this message need the @?",
+  "choices": [
+    {
+      "key": "plain",
+      "label": "Just send it — no @",
+      "accent": "--purple-electric"
+    },
+    {
+      "key": "at",
+      "label": "Add the @mention",
+      "accent": "--purple"
+    }
+  ],
+  "breakdownLabels": {
+    "plain": "no @",
+    "at": "@mention"
+  },
+  "pointsPerCorrect": 100,
+  "comboStep": 1,
+  "scenarios": [
+    {
+      "q": "In your 1:1 DM with Sam, you write: \"@Sam do you have 10 minutes this afternoon?\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. It's a DM, so Sam gets notified the moment you hit send. \"Do you have 10 minutes?\" says everything.",
+        "at": "Redundant ping. The DM already notifies Sam, so the @ adds nothing except a faint whiff of impatience."
+      }
+    },
+    {
+      "q": "Sam asked a question in a thread in your 1:1 DM, and you reply in that thread: \"@Sam yep, ship it.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Slack notifies both people of every thread reply in a 1:1 DM by default. \"Yep, ship it\" lands.",
+        "at": "This is the myth the site exists for. Threads in 1:1 DMs notify on every reply, so the @ is decoration."
+      }
+    },
+    {
+      "q": "You're replying in a thread in your 1:1 DM with your manager, under a message they sent last week.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Even an old thread notifies on new replies in a 1:1 DM. Age doesn't matter.",
+        "at": "Belt-and-suspenders ping. Old or new, a 1:1 DM thread reply already reaches them."
+      }
+    },
+    {
+      "q": "In a group DM with Lee and Priya, a thread exists between you and Lee, and now you need Priya, who hasn't said a word in it, to confirm the budget.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. In a group DM, thread replies only notify people who started the thread, replied, or were mentioned. Priya is none of those.",
+        "at": "Right. This is the legit case: a group-DM thread where the person hasn't joined in. Without the @, Priya never sees it."
+      }
+    },
+    {
+      "q": "Jordan said \"ping me when the build is green\" in your 1:1 DM, and now it's green.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Build's green\" in the DM is the ping. That's what a DM is.",
+        "at": "Double tap. Jordan asked for a ping, and a DM already is one. Spelling it \"@Jordan\" doesn't make it more of one."
+      }
+    },
+    {
+      "q": "Your teammate has paused notifications, and you want an @ in your DM to break through because it's urgent.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. An @ doesn't pierce paused notifications. For a genuine emergency, Slack offers DM senders a once-a-day \"notify anyway\" override, so use that or just call them.",
+        "at": "Wrong tool. Paused is paused, and an @ won't get through. The DM override is a separate, deliberate button."
+      }
+    },
+    {
+      "q": "You open a fresh DM to a new hire on day one: \"@Riley welcome aboard! Holler if you need anything.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Welcome aboard, Riley!\" is warmer anyway, and the DM notifies them regardless.",
+        "at": "It's a welcome note, not a page. The @ makes a friendly message read like a ticket assignment."
+      }
+    },
+    {
+      "q": "In a five-person group DM, a thread is going between you and Ana, and you need Ben, who hasn't replied, to check a number.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. Ben isn't following the thread, so a plain reply won't notify him.",
+        "at": "Right. In a group-DM thread, the @ is how a non-participant hears about it, and the mention also subscribes him to future replies."
+      }
+    },
+    {
+      "q": "Lee started a thread in your group DM, and you're replying to answer Lee's question.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Lee started the thread, so Lee gets notified of replies. No @ needed.",
+        "at": "Redundant. Starting the thread already subscribed Lee. The @ is a second knock on an open door."
+      }
+    },
+    {
+      "q": "Priya already replied in a group-DM thread an hour ago, and now you're answering her follow-up.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Replying subscribed Priya to the thread, so she'll get yours.",
+        "at": "Redundant. Once someone's replied in a thread, they're following it. The @ adds noise, not reach."
+      }
+    },
+    {
+      "q": "Someone in your group-DM thread was @mentioned earlier in it, and you're now replying to what they said.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Being mentioned earlier is one of the three ways into a thread's notifications. They're already in.",
+        "at": "Re-mentioning someone who's already following just stacks pings. One mention per thread is enough."
+      }
+    },
+    {
+      "q": "You send your weekly status update to your manager in your 1:1 DM, opening with \"@Morgan, weekly update:\".",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Weekly update:\" is the whole header. It's a DM, so Morgan gets notified.",
+        "at": "Ceremony, not signal. The @ on a recurring DM update trains Morgan to tune out your mentions."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you send three messages in a row, and each one starts with \"@Kim\".",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Every one of those messages already notifies Kim. Better still, fold them into one message.",
+        "at": "Three @s in a private conversation reads like someone banging on the door."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you share a link: \"@Alex saw this and thought of you.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Saw this and thought of you\" lands fine without the @. It's a DM.",
+        "at": "A friendly share with an @ attached reads more like an assignment than a gift."
+      }
+    },
+    {
+      "q": "In a 1:1 DM, you tell Sam: \"ask @Priya, she owns billing\". Priya isn't in the DM.",
+      "correct": "at",
+      "why": {
+        "plain": "\"Ask Priya\" leaves Sam guessing which Priya and how to find her. A non-pinging profile link is pure help.",
+        "at": "Right. Per Slack, people who aren't in the DM aren't notified, so here the @ is just a clickable name tag for Sam."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, Sam hasn't answered for an hour, so you follow up with \"@Sam bump\".",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. A follow-up DM notifies them again on its own. If an hour of silence matters, say why: \"need this by 3 for the client call.\"",
+        "at": "Escalating with an @ in a DM changes nothing mechanically and plenty tonally. It reads as \"I am watching you not reply.\""
+      }
+    },
+    {
+      "q": "You're schedule-sending a DM to a coworker for Monday 9am, and you add an @ so they don't miss it.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. A scheduled DM is still a DM when it lands, so it notifies like any other.",
+        "at": "Scheduling doesn't weaken the notification, so the @ is still insurance against nothing."
+      }
+    },
+    {
+      "q": "In a group DM with Dana and Eli, Dana opened a thread with you, and now you need Eli, who hasn't seen it, to make the call.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. Eli didn't start the thread, didn't reply, and wasn't mentioned, so Eli gets nothing.",
+        "at": "Right. Group-DM thread plus a non-participant you need is exactly the case the @ was built for."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you reply in-thread to their message from this morning: \"@Taylor done, merged.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. 1:1 DM threads notify both people on every reply by default.",
+        "at": "Redundant. The thread you're in is in a two-person DM, and both of you get every reply."
+      }
+    },
+    {
+      "q": "In your 1:1 DM with a partner via Slack Connect, you open with \"@Jamie quick question on the contract.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. A DM is a DM, even across companies. \"Quick question on the contract\" is plenty.",
+        "at": "Same redundancy with an outside partner, and a little brusque when you're representing your company."
+      }
+    },
+    {
+      "q": "In a four-person group DM, you post a new top-level message and need one specific person to own the decision.",
+      "correct": "at",
+      "why": {
+        "plain": "Everyone's notified, but with no name nobody knows it's theirs, and the decision stalls in a three-way game of chicken.",
+        "at": "Right, with a caveat: the @ isn't for the notification (everyone got that). It's assigning ownership in a room of four."
+      }
+    },
+    {
+      "q": "In a group DM, you post meeting notes top-level for everyone, with each person @mentioned in the first line.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Top-level messages in a DM notify everyone in it. Save @s for the line where a specific person owns an action.",
+        "at": "A roll call of @s on a message everyone already gets is just volume."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you remind a coworker: \"@Chris reminder, the deck is due Friday.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Reminder: deck's due Friday\" in a DM notifies Chris on its own.",
+        "at": "Adding an @ to a reminder makes it read like an escalation. The DM was already the nudge."
+      }
+    },
+    {
+      "q": "Your coworker is on vacation, and you @ them in the DM so it's \"top of their list\" when they're back.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. It'll sit as an unread DM when they return either way. If it's truly first priority, say so in words.",
+        "at": "No priority boost. A DM is already unread and badged, and the @ doesn't jump the queue."
+      }
+    },
+    {
+      "q": "You started a thread in your group DM, and Max replied, so now you're answering Max.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Max replied, so Max is following the thread and will get yours.",
+        "at": "Redundant. Max subscribed themselves the moment they replied."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you send a doc for review: \"@Pat could you look at this by EOD?\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. \"Could you look at this by EOD?\" with the link is the whole message, and the DM notifies Pat.",
+        "at": "The deadline does the work, and the @ just adds pressure on top of it."
+      }
+    },
+    {
+      "q": "In your 1:1 DM thread, Sam replied 30 seconds ago and you write back \"@Sam yep.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. You're mid-conversation in a two-person thread. \"Yep\" lands instantly.",
+        "at": "Live back-and-forth plus an @ is like saying someone's name in every sentence across a small table."
+      }
+    },
+    {
+      "q": "In a group DM, you need someone who hasn't touched a thread to take over the task being discussed in it.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. They're not subscribed to the thread, so the handoff never reaches them and the task stalls.",
+        "at": "Right. The @ notifies them and subscribes them to the thread, so the handoff actually lands."
+      }
+    },
+    {
+      "q": "In a group DM, you post a top-level \"we shipped it!\" to the three people who worked on it.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Everyone in a group DM gets top-level messages. Celebrate without the roll call.",
+        "at": "Three @s on a celebration nobody could miss is just volume."
+      }
+    },
+    {
+      "q": "You worry your 1:1 DM won't show up in their Activity tab, so you add an @.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. DMs notify by default and show up badged and unread. You don't need a mention to get noticed.",
+        "at": "Optimizing for a tab instead of the person. The DM already got their attention."
+      }
+    },
+    {
+      "q": "In a group DM with your two co-leads, you start a thread and need both to weigh in, though neither has replied yet.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. In a group DM, only the thread's starter, repliers, and mentioned people get notified, and right now that's just you.",
+        "at": "Right. Starting the thread only subscribes you. To pull both co-leads in, mention them."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you answer the question your coworker asked you in a thread there.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. 1:1 DM thread, so every reply notifies them by default.",
+        "at": "They asked you the question, in a two-person thread. They're listening."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you're delivering bad news: \"@Jo the launch is slipping a week.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Bad news lands better as a calm sentence than as a page.",
+        "at": "An @ makes hard news feel like an alarm going off. The DM already got their attention."
+      }
+    },
+    {
+      "q": "A teammate asks if they should @ you in your DMs \"just to be safe.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Tell them no. Every DM and every thread reply in a 1:1 DM already notifies you.",
+        "at": "\"Just to be safe\" is the whole myth in three words. There's no extra safety to buy."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you add an @ because \"mobile push notifications only fire on mentions.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Slack's notification settings bundle DMs and mentions together (\"Direct messages, mentions &amp; keywords\"), so a DM already gets the push.",
+        "at": "Mythology. DMs and mentions sit in the same notification bucket."
+      }
+    },
+    {
+      "q": "In a group DM, you reply to a thread you and Noor have been going back and forth in.",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. Noor's been replying, so Noor is following.",
+        "at": "Redundant. Back-and-forth means Noor's already subscribed."
+      }
+    },
+    {
+      "q": "In your 1:1 DM, you start a thread on an old message and want to make sure it doesn't \"get buried.\"",
+      "correct": "plain",
+      "why": {
+        "plain": "Right. 1:1 DM thread replies notify on every reply, so nothing gets buried.",
+        "at": "Thread-burial anxiety is real in busy channels, not in a two-person DM."
+      }
+    },
+    {
+      "q": "In a group DM with Ana and Raj, Ana's thread has only you and Ana in it, and you want Raj to know his PR is the fix.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. Raj never touched the thread, so in a group DM he won't be notified.",
+        "at": "Right. Group-DM thread, non-participant. The @ is the only thing that reaches Raj."
+      }
+    },
+    {
+      "q": "In a group DM, you started a thread to ask Mel a question, but Mel hasn't replied in it yet.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. Starting a thread subscribes you, not Mel, so Mel won't be notified.",
+        "at": "Right. In a group DM, starting a thread doesn't notify the person you're asking. Mention them."
+      }
+    },
+    {
+      "q": "In a three-person group DM, a thread between you and Sky needs Oz, who hasn't replied, to sign off before you ship.",
+      "correct": "at",
+      "why": {
+        "plain": "Silent miss. Oz isn't following the thread, so a sign-off request with no @ quietly blocks your ship.",
+        "at": "Right. Oz hasn't started, replied, or been mentioned, and the @ fixes all three at once."
+      }
+    }
+  ],
+  "takeaways": [
+    "In a 1:1 DM, everything notifies by default: top-level messages <em>and</em> every thread reply. (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>)",
+    "The real exception is a <strong>group-DM thread</strong>. Someone who didn't start it, reply to it, or get mentioned in it won't hear about replies, so @ them.",
+    "An @ won't get through paused notifications. For a real emergency, use the DM's once-a-day override. (<a href=\"https://slack.com/help/articles/214908388-Pause-notifications-with-Do-Not-Disturb\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Do Not Disturb</a>)",
+    "@ing someone who isn't in the DM doesn't notify them. It works as a profile link, not a ping. (<a href=\"https://slack.com/help/articles/205240127-Use-mentions-in-Slack\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use mentions</a>)"
+  ],
+  "footer": {
+    "crossPromo": "https://fairpoint.website",
+    "repoUrl": "https://github.com/Paulfrazier/dontatindms"
+  }
+}
