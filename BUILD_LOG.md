@@ -2,6 +2,21 @@
 
 > Append an entry whenever you change this site. Newest first.
 
+## 2026-10-06 — Make "even if they haven't joined the thread" explicit up front
+
+**Prompt:** update the site to make it clear from the start even when the thread doesn't have the other person yet. double check true.
+
+**Problem:** The intro said 1:1 DMs notify on thread replies, but never said this holds even when the other person hasn't started, replied to or been mentioned in the thread. That participation rule is what makes group DMs different, so readers could carry it over to 1:1 threads.
+
+**Solution:** Spelled out the 1:1 "all threads" rule in the thesis, the first explainer card, the meta description and the first takeaway. Rewrote the 1:1 "old message" scenario to test the exact case: a thread under your own message that the other person hasn't replied in.
+
+**Key decisions:**
+- Re-verified against [Slack: Use threads](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-) on 2026-10-06. It says "By default, you'll be notified of new replies to all threads in one-to-one DMs," with no participation condition. The "started, replied, or mentioned" rule applies only to channels and multi-person DMs.
+- Edited an existing scenario instead of adding one, so the bank stays at 40 (30 `plain` / 10 `at`) and the "40-scenario" copy stays true.
+- Also live as of today: DNS (`A dontatindms → 76.76.21.21`) added via the Namecheap API, and the Vercel certificate issued after re-attaching the domain to the project.
+
+**Changed files:** `spec.json`, `index.html`, `BUILD_LOG.md`
+
 ## 2026-10-03 — Initial build
 
 **Prompt:** /fairpoint don't @someone in a dm. even in a thread. they get the notif! (confirm via slack docs this is true true, and link to it)
