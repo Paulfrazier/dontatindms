@@ -20,15 +20,15 @@
   "subdomain": "dontatindms",
   "repo": "dontatindms",
   "title": "Don't @ in DMs. — they already get the notification",
-  "metaDescription": "A 40-scenario quiz on @mentioning people in Slack DMs. In a 1:1 DM, every message and every thread reply already notifies them. Drop the @.",
+  "metaDescription": "A 40-scenario quiz on @mentioning people in Slack DMs. In a 1:1 DM, every message and every thread reply already notifies them, even in a thread they haven't joined. Drop the @.",
   "h1": "Don't @ in DMs.",
-  "thesis": "Starting a DM with <code>@Sam</code> feels like making sure Sam sees it. Sam was always going to see it. In a direct message, the message <em>is</em> the ping, and that includes replies in a thread.",
+  "thesis": "Starting a DM with <code>@Sam</code> feels like making sure Sam sees it. Sam was always going to see it. In a direct message, the message <em>is</em> the ping, and that includes every thread reply, even in a thread Sam hasn't touched yet.",
   "explainerHeading": "The 30-second explainer (straight from Slack's docs)",
   "explainer": [
     {
       "h3": "1:1 DMs notify everything",
       "accent": "--purple-electric",
-      "body": "By default, Slack notifies you when <a href=\"https://slack.com/help/articles/360025446073-Guide-to-Slack-notifications\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">someone sends you a direct message</a>. Threads too: <em>\"By default, you'll be notified of new replies to all threads in one-to-one DMs.\"</em> (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>) Adding an @ doesn't make that notification any louder."
+      "body": "By default, Slack notifies you when <a href=\"https://slack.com/help/articles/360025446073-Guide-to-Slack-notifications\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">someone sends you a direct message</a>. Threads too: <em>\"By default, you'll be notified of new replies to all threads in one-to-one DMs.\"</em> (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>) <strong>All</strong> threads means all of them, including one you just started under your own message that they haven't replied in yet. In a two-person DM, they don't need to join a thread to hear from it. Adding an @ doesn't make that notification any louder."
     },
     {
       "h3": "The one gap: group-DM threads",
@@ -346,11 +346,11 @@
       }
     },
     {
-      "q": "In your 1:1 DM, you start a thread on an old message and want to make sure it doesn't \"get buried.\"",
+      "q": "In your 1:1 DM, you start a thread under your own message from last week. Jo hasn't replied in it yet, and you want to be sure Jo sees it.",
       "correct": "plain",
       "why": {
-        "plain": "Right. 1:1 DM thread replies notify on every reply, so nothing gets buried.",
-        "at": "Thread-burial anxiety is real in busy channels, not in a two-person DM."
+        "plain": "Right. In a 1:1 DM, every thread reply notifies both people, whether or not Jo has joined the thread.",
+        "at": "Redundant. Joining a thread only matters in group DMs and channels. In a 1:1 DM, Jo gets every reply anyway."
       }
     },
     {
@@ -379,7 +379,7 @@
     }
   ],
   "takeaways": [
-    "In a 1:1 DM, everything notifies by default: top-level messages <em>and</em> every thread reply. (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>)",
+    "In a 1:1 DM, everything notifies by default: top-level messages <em>and</em> every thread reply, even in a thread they haven't joined yet. (<a href=\"https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use threads</a>)",
     "The real exception is a <strong>group-DM thread</strong>. Someone who didn't start it, reply to it, or get mentioned in it won't hear about replies, so @ them.",
     "An @ won't get through paused notifications. For a real emergency, use the DM's once-a-day override. (<a href=\"https://slack.com/help/articles/214908388-Pause-notifications-with-Do-Not-Disturb\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Do Not Disturb</a>)",
     "@ing someone who isn't in the DM doesn't notify them. It works as a profile link, not a ping. (<a href=\"https://slack.com/help/articles/205240127-Use-mentions-in-Slack\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--purple-electric);text-underline-offset:2px\">Slack: Use mentions</a>)"
